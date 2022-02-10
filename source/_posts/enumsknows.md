@@ -8,8 +8,8 @@ tags:
 date: 2021-03-05 09:12:05
 ---
 
-# Java中枚举类型怎么理解
-## 认识
+Java中枚举类型怎么理解
+# 认识
 **同Object类**
 
 
@@ -38,7 +38,7 @@ Direction d = Direction.FRONT;
 ```
 **枚举类主要用于表示有限固定的对象**，如word文档的对齐方式有几种：左对齐、居中对齐、右对齐。开车的方向有几种：前、后、左、右！
 
-## 变量和方法
+# 变量和方法
 上例中FRONT, BEHIND, LEFT, RIGHT 都是Direction类的对象，注意，只是对象。那么我们可以在Direction中定义成员变量，实例方法，静态方法等等，
 和正常类是一样的，这些方法是对象都可以用的，**枚举类中的方法和属性是对象公用的**。
 
@@ -49,7 +49,8 @@ Direction d = Direction.FRONT;
 enum Direction {
     FRONT, BEHIND, LEFT, RIGHT
     /* 
-      枚举类的构造器不可以添加访问修饰符，枚举类的构造器默认是private的。但你自己不能添加private来修饰构造器。
+      枚举类的构造器不可以添加访问修饰符，枚举类的构造器默认是private的。
+      但你自己不能添加private来修饰构造器。
     */ 
     Direction() {
         System.out.println("hello");
@@ -102,7 +103,7 @@ enum Direction {
     public abstract void fun()[只需要把fun()方法修改为抽象方法，但不可以把Direction类声明为抽象类。];
 }
 ```
-## 使用问题
+# 使用问题
 枚举类中实例常量是类的对象，switch语句块中不需要按照类名.常量名，
 如下，case 后面跟直接跟FRONT, 而不是Direction.FRONT。
 
